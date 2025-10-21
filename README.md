@@ -21,6 +21,7 @@ configx = "0.1"
 ```
 
 ## Dukungan Format
+
 ```toml
 .yaml / .yml → YAML
 
@@ -31,7 +32,9 @@ configx = "0.1"
 ```
 
 ## Contoh Penggunaan
+
 ```toml
+
 use configx::ConfigWatcher;
 use std::{thread, time::Duration};
 
