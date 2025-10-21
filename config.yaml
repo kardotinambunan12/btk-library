@@ -1,0 +1,17 @@
+
+database:
+  dbname: "test"
+  dbuser: "postgres"
+  dbpass: ""
+  dbhost: "localhost"
+  dbport: 5432
+  sslmode: "disable"
+  pool_size: 10
+
+server:
+  host: "127.0.0.1"
+  port: 8080
+
+  x-key: "x-key"
+  x-secret: "x-secret"
+  x-algo: "HS256"
