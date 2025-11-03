@@ -51,7 +51,9 @@ impl DynamicConfig {
 }
 
 fn get_nested_json_owned(val: &serde_json::Value, keys: &[&str]) -> Option<serde_json::Value> {
-    if keys.is_empty() { return Some(val.clone()); }
+    if keys.is_empty() {
+        return Some(val.clone());
+    }
     let first = keys[0];
     val.get(first).and_then(|v| get_nested_json_owned(v, &keys[1..]))
 }
@@ -59,7 +61,9 @@ fn get_nested_json_owned(val: &serde_json::Value, keys: &[&str]) -> Option<serde
 
 /// Rekursif ambil value JsonValue dari keys
 fn get_nested_json<'a>(val: &'a JsonValue, keys: &[&str]) -> Option<&'a JsonValue> {
-    if keys.is_empty() { return Some(val); }
+    if keys.is_empty() {
+        return Some(val);
+    }
     let first = keys[0];
     val.get(first).and_then(|v| get_nested_json(v, &keys[1..]))
 }

@@ -39,6 +39,7 @@ impl ConfigWatcher {
 
         Self { path: PathBuf::from(path), config }
     }
+    
 
     pub fn get(&self) -> Arc<RwLock<DynamicConfig>> {
         Arc::clone(&self.config)

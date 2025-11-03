@@ -1,5 +1,4 @@
 pub mod parser;
-pub mod validator;
 pub mod watcher;
 
 use serde::{Deserialize, Serialize};
